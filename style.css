@@ -1,0 +1,203 @@
+/* ----------------------
+********VARIABLES********
+-----------------------*/
+body {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.calendar {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template: repeat(6, 100px)/repeat(7, 100px);
+  grid-gap: 1px;
+}
+.calendar div {
+  background-color: #eeeeee;
+  border: 1px solid black;
+}
+.calendar div:hover {
+  background-color: #f7afbc;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.calendar div::before {
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-28 > :last-child,
+.calendar-28 > :nth-child(30),
+.calendar-28 > :nth-child(29) {
+  display: none;
+}
+
+.calendar-29 > :last-child,
+.calendar-29 > :nth-child(30) {
+  display: none;
+}
+
+.calendar-30 > :last-child {
+  display: none;
+}
+
+.calendar div:nth-child(1)::before {
+  content: "1";
+}
+
+.calendar div:nth-child(2)::before {
+  content: "2";
+}
+
+.calendar div:nth-child(3)::before {
+  content: "3";
+}
+
+.calendar div:nth-child(4)::before {
+  content: "4";
+}
+
+.calendar div:nth-child(5)::before {
+  content: "5";
+}
+
+.calendar div:nth-child(6)::before {
+  content: "6";
+}
+
+.calendar div:nth-child(7)::before {
+  content: "7";
+}
+
+.calendar div:nth-child(8)::before {
+  content: "8";
+}
+
+.calendar div:nth-child(9)::before {
+  content: "9";
+}
+
+.calendar div:nth-child(10)::before {
+  content: "10";
+}
+
+.calendar div:nth-child(11)::before {
+  content: "11";
+}
+
+.calendar div:nth-child(12)::before {
+  content: "12";
+}
+
+.calendar div:nth-child(13)::before {
+  content: "13";
+}
+
+.calendar div:nth-child(14)::before {
+  content: "14";
+}
+
+.calendar div:nth-child(15)::before {
+  content: "15";
+}
+
+.calendar div:nth-child(16)::before {
+  content: "16";
+}
+
+.calendar div:nth-child(17)::before {
+  content: "17";
+}
+
+.calendar div:nth-child(18)::before {
+  content: "18";
+}
+
+.calendar div:nth-child(19)::before {
+  content: "19";
+}
+
+.calendar div:nth-child(20)::before {
+  content: "20";
+}
+
+.calendar div:nth-child(21)::before {
+  content: "21";
+}
+
+.calendar div:nth-child(22)::before {
+  content: "22";
+}
+
+.calendar div:nth-child(23)::before {
+  content: "23";
+}
+
+.calendar div:nth-child(24)::before {
+  content: "24";
+}
+
+.calendar div:nth-child(25)::before {
+  content: "25";
+}
+
+.calendar div:nth-child(26)::before {
+  content: "26";
+}
+
+.calendar div:nth-child(27)::before {
+  content: "27";
+}
+
+.calendar div:nth-child(28)::before {
+  content: "28";
+}
+
+.calendar div:nth-child(29)::before {
+  content: "29";
+}
+
+.calendar div:nth-child(30)::before {
+  content: "30";
+}
+
+.calendar div:nth-child(31)::before {
+  content: "31";
+}
+
+.calendar-mon :first-child {
+  grid-column-start: 1;
+}
+
+.calendar-tue :first-child {
+  grid-column-start: 2;
+}
+
+.calendar-wed :first-child {
+  grid-column-start: 3;
+}
+
+.calendar-thu :first-child {
+  grid-column-start: 4;
+}
+
+.calendar-fri :first-child {
+  grid-column-start: 5;
+}
+
+.calendar-sat :first-child {
+  grid-column-start: 6;
+}
+
+.calendar-sun :first-child {
+  grid-column-start: 7;
+}
+
+/*# sourceMappingURL=style.css.map */

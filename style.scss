@@ -1,0 +1,73 @@
+$box_size: 100px;
+$position: 50%;
+$calendar_font_size: 30px;
+$days: (mon: 1, tue: 2, wed: 3, thu: 4, fri: 5, sat: 6, sun: 7);
+
+/* ----------------------
+********VARIABLES********
+-----------------------*/
+
+body {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.calendar {
+  font-size: $calendar_font_size;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: $box_size;
+  position: fixed;
+  top: $position;
+  left: $position;
+  transform: translate(-$position, -$position);
+  display: grid;
+  grid-template: repeat(6, $box_size) / repeat(7, $box_size);
+  grid-gap: 1px;
+
+  div {
+    background-color: #eeeeee;
+    border: 1px solid black;
+  }
+
+  div:hover {
+    background-color: rgb(247, 175, 188);
+    transform: translateY(-20px);
+    transition: all .5s ease;
+    cursor: pointer;
+  }
+  div::before {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.calendar-28 > :last-child,
+.calendar-28 > :nth-child(30),
+.calendar-28 > :nth-child(29){
+  display: none;
+}
+
+.calendar-29 > :last-child,
+.calendar-29 > :nth-child(30){
+  display: none;
+}
+
+.calendar-30 > :last-child{
+  display: none;
+}
+
+@for $i from 1 through 31 {
+  .calendar {
+    div:nth-child(#{$i})::before {
+      content: '#{$i}';
+    }
+  }
+}
+
+@each $day, $num in $days {
+  .calendar-#{$day} {
+    :first-child {
+      grid-column-start: $num;
+    }
+  }
+}
