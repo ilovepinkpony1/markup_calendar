@@ -41,19 +41,22 @@ body {
   }
 }
 
-.calendar-28 > :last-child,
-.calendar-28 > :nth-child(30),
-.calendar-28 > :nth-child(29){
-  display: none;
+.calendar-28 {
+  :last-child, :nth-child(30), :nth-child(29) {
+    display: none;
+  }
 }
 
-.calendar-29 > :last-child,
-.calendar-29 > :nth-child(30){
-  display: none;
+.calendar-29 {
+  :last-child, :nth-child(30) {
+    display: none;
+  }
 }
 
-.calendar-30 > :last-child{
-  display: none;
+.calendar-30 {
+  :last-child {
+    display: none;
+  }
 }
 
 @for $i from 1 through 31 {
