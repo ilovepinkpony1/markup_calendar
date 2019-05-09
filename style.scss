@@ -16,7 +16,7 @@ body {
   font-size: $calendar_font_size;
   font-family: Arial, Helvetica, sans-serif;
   line-height: $box_size;
-  position: fixed;
+  position: absolute;
   top: $position;
   left: $position;
   transform: translate(-$position, -$position);
